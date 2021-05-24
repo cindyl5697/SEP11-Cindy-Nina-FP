@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="style.css" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+      <!-- HTML -->
+    <div class="container">
+      <h1>TO-DO LIST:</h1>
+
+      <input type="text" placeholder="ENTER A TASK" id="task">
+      <button id='add' >ADD</button>
+      <button id='clear'>CLEAR</button>
+
+    
+
+      <br>
+      <br>
+
+      <h2>TODO:</h2>
+      <p id='todo'></p>
+      
+      <h2>COMPLETED:</h2>
+      <p id='complete'></p>
+
+
+      <!-- Firebase Scripts -->
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+      <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBqpFbx2BD0gokHFkjG7_dgjTp_4F28RTU",
+          authDomain: "firestore-testing-9095c.firebaseapp.com",
+          databaseURL: "https://firestore-testing-9095c.firebaseio.com",
+          projectId: "firestore-testing-9095c",
+          storageBucket: "firestore-testing-9095c.appspot.com",
+          messagingSenderId: "257330495741",
+          appId: "1:257330495741:web:3f252dfece211887f5be94",
+          measurementId: "G-S63PKJ1VQZ"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.firestore();
+      </script>
+
+      <script src="script.js"></script>
+    </body>
+</html>
