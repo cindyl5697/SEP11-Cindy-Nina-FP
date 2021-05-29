@@ -61,4 +61,3 @@ document.getElementById('add').addEventListener("click",function(){
   // resets input box when add is clicked
   document.getElementById('task').value = "";
 });
-
