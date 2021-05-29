@@ -23,42 +23,23 @@
     </head>
     <body>
       <!-- HTML -->
-    <div class="container">
-      <h1>TO-DO LIST:</h1>
+      <div class="container">
+        <h1>TO-DO LIST:</h1>
 
-      <input type="text" placeholder="ENTER A TASK" id="task">
-      <button id='add'>ADD</button>
+        <input type="text" placeholder="ENTER A TASK" id="task">
+        <button id='add'>ADD</button>
 
-      <br>
-      <br>
+        <br>
+        <br>
 
-      <h2>TODO:</h2>
-      <div id='todo'></div>
-      <h2>COMPLETED:</h2>
-      <div id='complete'></div>
-
+        <h2>TODO:</h2>
+        <div id='todo'></div>
+        <h2>COMPLETED:</h2>
+        <div id='complete'></div>
+        
+      </div>
 
       <!-- Firebase Scripts -->
-      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
-
-      <script>
-        var firebaseConfig = {
-          apiKey: "AIzaSyBqpFbx2BD0gokHFkjG7_dgjTp_4F28RTU",
-          authDomain: "firestore-testing-9095c.firebaseapp.com",
-          databaseURL: "https://firestore-testing-9095c.firebaseio.com",
-          projectId: "firestore-testing-9095c",
-          storageBucket: "firestore-testing-9095c.appspot.com",
-          messagingSenderId: "257330495741",
-          appId: "1:257330495741:web:3f252dfece211887f5be94",
-          measurementId: "G-S63PKJ1VQZ"
-        };
-
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.firestore();
-      </script>
 
       <script src="script.js"></script>
     </body>
