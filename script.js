@@ -5,20 +5,21 @@ document.getElementById('add').addEventListener("click",function(){
     
   var output = document.createElement('p');
 
-  // trash icon
-  var trashIcon = document.createElement('span');
-  output.appendChild(trashIcon);
-  trashIcon.classList.add('gg-trash');
-
   // check icon
   var checkIcon = document.createElement('span');
   output.appendChild(checkIcon);
   checkIcon.classList.add('gg-check-r');
+  
+  // trash icon
+  var trashIcon = document.createElement('span');
+  // trashIcon.src = 'trashIcon.png';
+  output.appendChild(trashIcon);
+  trashIcon.classList.add('gg-trash');
 
   // edit icon
   var editIcon = document.createElement('span');
   output.appendChild(editIcon);
-  editIcon.classList.add('gg-backspace');
+  editIcon.classList.add('gg-pen');
 
   output.innerHTML += start;
   
@@ -38,6 +39,16 @@ document.getElementById('add').addEventListener("click",function(){
     });
   });
 
+  // when edit icon is clicked, edit task
+  var allEdit = document.querySelectorAll('.gg-pen');
+
+  allEdit.forEach(function(allEdit, editIcon){
+    allEdit.addEventListener("click",function(){
+      console.log("edit");
+      document.querySelector('#todo').appendChild(output).contentEditable = true;
+    });
+  });
+  
   // when check icon is clicked, moves task to complete
   var allComplete = document.querySelectorAll('.gg-check-r');
 
@@ -45,16 +56,6 @@ document.getElementById('add').addEventListener("click",function(){
     allComplete.addEventListener("click",function(){
       console.log("complete");
       document.querySelector('#complete').appendChild(output);
-    });
-  });
-
-  // when edit icon is clicked, edit task
-  var allEdit = document.querySelectorAll('.gg-backspace');
-
-  allEdit.forEach(function(allEdit, editIcon){
-    allEdit.addEventListener("click",function(){
-      console.log("edit");
-      document.querySelector('#todo').appendChild(output).contentEditable = true;
     });
   });
 

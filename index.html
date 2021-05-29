@@ -12,14 +12,14 @@
       <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
 
       <!-- check icon -->
-      <link href='https://css.gg/check-r.css' rel='stylesheet'>
+      <!-- <link href='https://css.gg/check-r.css' rel='stylesheet'> -->
 
       <!-- trash icon -->
-      <link href='https://css.gg/trash.css' rel='stylesheet'>
+      <!-- <link href='https://css.gg/trash.css' rel='stylesheet'> -->
 
       <!-- edit icon -->
-      <link href='https://css.gg/backspace.css' rel='stylesheet'>
-      
+      <!-- <link href='https://css.gg/pen.css' rel='stylesheet'> -->
+
     </head>
     <body>
       <!-- HTML -->
@@ -34,9 +34,31 @@
 
       <h2>TODO:</h2>
       <div id='todo'></div>
-      
       <h2>COMPLETED:</h2>
       <div id='complete'></div>
+
+
+      <!-- Firebase Scripts -->
+      <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+      <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+      <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyBqpFbx2BD0gokHFkjG7_dgjTp_4F28RTU",
+          authDomain: "firestore-testing-9095c.firebaseapp.com",
+          databaseURL: "https://firestore-testing-9095c.firebaseio.com",
+          projectId: "firestore-testing-9095c",
+          storageBucket: "firestore-testing-9095c.appspot.com",
+          messagingSenderId: "257330495741",
+          appId: "1:257330495741:web:3f252dfece211887f5be94",
+          measurementId: "G-S63PKJ1VQZ"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.firestore();
+      </script>
 
       <script src="script.js"></script>
     </body>
