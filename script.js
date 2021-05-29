@@ -1,28 +1,64 @@
-//adds tasks
+// adds tasks
 document.getElementById('add').addEventListener("click",function(){
   var start = ""; 
   start += document.querySelector('#task').value;
     
-  var output = document.createElement('div');
-  output.innerHTML = start;
+  var output = document.createElement('p');
 
-  //adds task to todo
-  document.querySelector('#todo').appendChild(output);
+  // trash icon
+  var trashIcon = document.createElement('span');
+  output.appendChild(trashIcon);
+  trashIcon.classList.add('gg-trash');
 
-  //when task is clicked, moves task to completed
-  output.addEventListener("click", function(){
-    document.querySelector('#complete').appendChild(output);
-  });
+  // check icon
+  var checkIcon = document.createElement('span');
+  output.appendChild(checkIcon);
+  checkIcon.classList.add('gg-check-r');
 
+  // edit icon
+  var editIcon = document.createElement('span');
+  output.appendChild(editIcon);
+  editIcon.classList.add('gg-backspace');
+
+  output.innerHTML += start;
+  
   console.log(start);
 
-});
-// delete button 
+  // adds task to todo
+  document.querySelector('#todo').appendChild(output);
 
+  // when trash icon is clicked, deletes task
+  var allTrash = document.querySelectorAll('.gg-trash');
 
+  allTrash.forEach(function(allTrash, trashIcon){
+    allTrash.addEventListener("click",function(event){
+      console.log("delete");
+      var remove = event.target.parentElement;
+      remove.style.display = "none";
+    });
+  });
 
-//clears the task input box
-document.getElementById('clear').addEventListener("click", function(){
+  // when check icon is clicked, moves task to complete
+  var allComplete = document.querySelectorAll('.gg-check-r');
+
+  allComplete.forEach(function(allComplete, checkIcon){
+    allComplete.addEventListener("click",function(){
+      console.log("complete");
+      document.querySelector('#complete').appendChild(output);
+    });
+  });
+
+  // when edit icon is clicked, edit task
+  var allEdit = document.querySelectorAll('.gg-backspace');
+
+  allEdit.forEach(function(allEdit, editIcon){
+    allEdit.addEventListener("click",function(){
+      console.log("edit");
+      document.querySelector('#todo').appendChild(output).contentEditable = true;
+    });
+  });
+
+  // resets input box when add is clicked
   document.getElementById('task').value = "";
 });
 
