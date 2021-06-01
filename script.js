@@ -1,6 +1,6 @@
 const list = document.querySelector('#todo');
 
-function toDo(){
+function toDo(text){
   var output = document.createElement('p');
   
   // adds task to todo
@@ -73,6 +73,6 @@ db.collection('todolist').get().then((snapshot) => {
   snapshot.docs.forEach(doc => {
     console.log(doc.data());
     var text = doc.data().input;
-    test(text);
+    toDo(text);
   });
 });
