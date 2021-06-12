@@ -1,7 +1,7 @@
 body {
   text-transform: uppercase; 
   font-family: 'Joti One', cursive;
-  background-image: url('bg2.png');
+  background-image: url('bg.png');
   text-align: center;
 }
 h1 {
@@ -12,6 +12,7 @@ h2 {
   color: #000000;
   font-size: 35px;
 }
+
 button {
   font-size: 23px;
   background-color: #ffffff;
