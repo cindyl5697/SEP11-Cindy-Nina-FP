@@ -5,10 +5,12 @@ body {
   background-size: 1440px 715px;
   text-align: center;
 }
+
 h1 {
   color: #000000;
   font-size: 70px;
 }
+
 h2 {
   color: #000000;
   font-size: 35px;
@@ -19,21 +21,26 @@ button {
   background-color: #ffffff;
   border: none;
 }
+
 div {
   color: #000000;
   font-size: 17.5px;
 }
+
 #complete {
   text-decoration-line: line-through;
 }
+
 span {
   height: 22px;
   width: 20px;
   display: inline-block;
 }
+
 p{
   font-size: 20px;
 }
+
 #task {
   width: 25%;
   padding: 12px 20px;
