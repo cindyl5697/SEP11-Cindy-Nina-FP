@@ -24,16 +24,15 @@
       <!-- trash icon -->
       <!-- <link href='https://css.gg/trash.css' rel='stylesheet'> -->
 
-      <!-- edit icon -->
-      <!-- <link href='https://css.gg/pen.css' rel='stylesheet'> -->
-
     </head>
     <body>
       <!-- HTML -->
+      <br>
       <div class="container">
-        <h1>TO-DO LIST:</h1>
+        <h1>TO-DO LIST</h1>
 
-        <input type="text" placeholder="ENTER A TASK" id="task">
+        <input type="text" id="task" placeholder="ENTER A TASK">
+        <input type="date" id="due-date" placeholder="due date">
         <button id='add'>ADD</button>
 
         <br>
@@ -41,6 +40,9 @@
 
         <h2>TODO:</h2>
         <div id='todo'></div>
+        
+        <br>
+        
         <h2>COMPLETED:</h2>
         <div id='complete'></div>
         
@@ -49,7 +51,6 @@
       <!-- Firebase Scripts -->
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script>
-      
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
